@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: "maven"
+    directory: "/" 
+    schedule:
+      interval: "daily" 
+    commit-message:
+      prefix: "maven-version-update"
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - "*" 
+        update-types:
+          - "minor"
+          - "patch"
+          
+  - package-ecosystem: "docker"
+    directory: "/" 
+    schedule:
+      interval: "daily" 
+    commit-message:
+      prefix: "docker"
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
