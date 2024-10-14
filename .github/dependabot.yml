@@ -1,11 +1,11 @@
 version: 2
 updates:
-  - package-ecosystem: "maven"
+  - package-ecosystem: "gradle"
     directory: "/" 
     schedule:
       interval: "daily" 
     commit-message:
-      prefix: "maven-version-update"
+      prefix: "gradle-version-update"
     groups:
       minor-and-patch:
         applies-to: version-updates
