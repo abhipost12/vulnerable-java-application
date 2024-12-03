@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
 
       - id: my-scan
-        uses: rapid7/insightappsec-scan-github-actions@v1.1.0
+        uses: rapid7/insightappsec-scan-github-actions@v1.2.0
         with:
           region: "us"
           api-key: ${{ secrets.IAS_API_KEY }}
